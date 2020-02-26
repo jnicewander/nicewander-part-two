@@ -19,8 +19,20 @@ function dest() {
     return recommendation;
 };
 
+function transport() {
+    let recommendation = '';
+
+    if (groupSize >= 6) {
+        recommendation = 'Charter Flight';
+    } else if (groupSize >= 2) {
+        recommendation = 'Helicopter';
+    } else {
+        recommendation = 'Charter Flight';
+    }
+    return recommendation;
+};
 
 const destination = dest();
-const transportMethod = '';
+const transportMethod = transport();
 const result = `You have a group of ${groupSize}, and would like to go on a ${vacationType} vacation. We recommend a trip to ${destination}, and with a group that size, you should take a ${transportMethod} to get there.`;
 console.log(result);
