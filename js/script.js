@@ -1,6 +1,7 @@
 // Declare required variables
 const vacationType = prompt('What kind of trip would you like to go on, musical, tropical, or adventurous?').toLowerCase();
 const groupSize = prompt('How many are in your group?');
+const grammar = 'a ';
 
 // Compare user input to determine destination
 function dest() {
@@ -9,9 +10,9 @@ function dest() {
     if (vacationType == 'musical') {
         recommendation = 'New Orleans';
     } else if (vacationType == 'tropical') {
-        recommendation = 'beach vacation in Mexico';
+        recommendation = grammar + 'beach vacation in Mexico';
     } else if (vacationType == 'adventurous') {
-        recommendation == 'whitewater rafting the Grand Canyon';
+        recommendation = grammar + 'whitewater rafting the Grand Canyon';
     } else {
         alert('Please choose either "musical", "tropical", or "adventurous".');
         window.location.reload(false);
@@ -24,9 +25,9 @@ function transport() {
     let recommendation = '';
 
     if (groupSize >= 6) {
-        recommendation = 'charter flight';
+        recommendation = grammar + 'charter flight';
     } else if (groupSize >= 2) {
-        recommendation = 'helicopter';
+        recommendation = grammar + 'helicopter';
     } else {
         recommendation = 'first class';
     }
@@ -35,5 +36,5 @@ function transport() {
 
 const destination = dest();
 const transportMethod = transport();
-const result = `Since you have a group of ${groupSize} and would like to go on a ${vacationType} vacation, you should take a ${transportMethod} to a ${destination}.`;
+const result = `Since you have a group of ${groupSize} and would like to go on a ${vacationType} vacation, you should take ${transportMethod} to ${destination}.`;
 console.log(result);
