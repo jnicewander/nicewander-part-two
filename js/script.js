@@ -9,9 +9,9 @@ function dest() {
     if (vacationType == 'musical') {
         recommendation = 'New Orleans';
     } else if (vacationType == 'tropical') {
-        recommendation = grammar + 'a sunny beach vacation in Mexico';
+        recommendation = 'a sunny beach vacation in Mexico';
     } else if (vacationType == 'adventurous') {
-        recommendation = grammar + 'try whitewater rafting the Grand Canyon';
+        recommendation = 'try whitewater rafting the Grand Canyon';
     } else {
         alert('Please choose either "musical", "tropical", or "adventurous".');
         window.location.reload(false);
