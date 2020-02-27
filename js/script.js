@@ -1,5 +1,5 @@
 // Declare required variables
-const vacationType = prompt('What kind of trip would you like to go on, musical, tropical, or adventurous?').toLowerCase();
+const vacationType = prompt('What kind of trip would you like to go on musical, tropical, or adventurous?').toLowerCase();
 const groupSize = prompt('How many are in your group?');
 const grammar = 'a ';
 
