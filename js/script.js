@@ -15,6 +15,7 @@ function dest() {
     } else {
         alert('Please choose either "musical", "tropical", or "adventurous".');
         window.location.reload(false);
+        return;
     }
     return recommendation;
 };
@@ -27,7 +28,7 @@ function transport() {
     } else if (groupSize >= 2) {
         recommendation = 'Helicopter';
     } else {
-        recommendation = 'Charter Flight';
+        recommendation = 'First Class';
     }
     return recommendation;
 };
