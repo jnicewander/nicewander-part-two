@@ -9,9 +9,9 @@ function dest() {
     if (vacationType == 'musical') {
         recommendation = 'New Orleans';
     } else if (vacationType == 'tropical') {
-        recommendation = 'Beach Vacation in Mexico';
+        recommendation = 'beach vacation in Mexico';
     } else if (vacationType == 'adventurous') {
-        recommendation == 'Whitewater Rafting the Grand Canyon';
+        recommendation == 'whitewater rafting the Grand Canyon';
     } else {
         alert('Please choose either "musical", "tropical", or "adventurous".');
         window.location.reload(false);
@@ -24,16 +24,16 @@ function transport() {
     let recommendation = '';
 
     if (groupSize >= 6) {
-        recommendation = 'Charter Flight';
+        recommendation = 'charter flight';
     } else if (groupSize >= 2) {
-        recommendation = 'Helicopter';
+        recommendation = 'helicopter';
     } else {
-        recommendation = 'First Class';
+        recommendation = 'first class';
     }
     return recommendation;
 };
 
 const destination = dest();
 const transportMethod = transport();
-const result = `You have a group of ${groupSize}, and would like to go on a ${vacationType} vacation. We recommend a trip to ${destination}, and with a group that size, you should take a ${transportMethod} to get there.`;
+const result = `Since you have a group of ${groupSize} and would like to go on a ${vacationType} vacation, you should take a ${transportMethod} to a ${destination}.`;
 console.log(result);
